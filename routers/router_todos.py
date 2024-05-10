@@ -77,8 +77,3 @@ async def todo_delete(todo_id: str, user_data: int= Depends(get_current_user)) :
     db.child('todo').child(todo_id).remove(token=user_data['idToken'])
     return "Todo deleted"
 
-# Reste à faire 
-# - Sortir mon todo's router dans un dossier "routers"
-# - Rédiger une documentation et l'ajouter à mon app FastAPI()
-# - Sortir mes pydantic models dans un dossier classes
-# - Ajouter les tags 
